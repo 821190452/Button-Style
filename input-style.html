@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta content="telephone=no" name="format-detection">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Foundation Input Style</title>
+<link rel="stylesheet" href="http://fonts.googlefonts.net/css?family=Noto+Sans" />
+<link rel="stylesheet" href="css/font-awesome.min.css?v.2017-9-6">
+<link rel="stylesheet" href="css/foundation-float.min.css?v.2017-9-6" />
+<link rel="stylesheet" href="css/base.css?2017-9-6" />
+<link rel="stylesheet" href="css/input-style.css" />
+<!--	 检测浏览器信息		-->
+<script type="text/javascript" src="https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+<!--	外围框架	-->
+<div class="viewport">
+	<div class="row">
+		<div class="input-box">
+			
+			<h3 class="is-title text-center">radio</h3>			
+			<div class="input-group clearfix">				
+				<label class="is-input-row medium-3 large-3 columns" for="radio_01">
+					<input id="radio_01" name="radio_clone" type="radio" />
+					<i class="fa fa-circle-o"></i>
+					<i class="fa fa-circle"></i>
+					单选 01
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="radio_02">
+					<input id="radio_02" name="radio_clone" type="radio" />
+					<i class="fa fa-circle-o"></i>
+					<i class="fa fa-circle"></i>
+					单选 02
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="radio_03">
+					<input id="radio_03" name="input_disabled" type="radio" checked="checked" disabled="disabled" />
+					<i class="fa fa-circle-o"></i>
+					<i class="fa fa-circle"></i>
+					默认已选择
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="radio_04">
+					<input id="radio_04" name="input_disabled" type="radio" disabled="disabled" />
+					<i class="fa fa-circle-o"></i>
+					<i class="fa fa-circle"></i>
+					默认不选择
+				</label>				
+			</div>
+			
+			<!--	checkbox	-->
+			<h3 class="is-title text-center">checkbox</h3>			
+			<div class="input-group clearfix">				
+				<label class="is-input-row medium-3 large-3 columns" for="check_01">
+					<input id="check_01" name="checkbox_clone" type="checkbox" />
+					<i class="fa fa-check-circle-o"></i>
+					<i class="fa fa-check-circle"></i>
+					单选 01
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="check_02">
+					<input id="check_02" name="checkbox_clone" type="checkbox" />
+					<i class="fa fa-check-circle-o"></i>
+					<i class="fa fa-check-circle"></i>
+					单选 02
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="check_03">
+					<input id="check_03" name="input_disabled" type="checkbox" checked="checked" disabled="disabled" />
+					<i class="fa fa-check-circle-o"></i>
+					<i class="fa fa-check-circle"></i>
+					默认已选择
+				</label>
+				
+				<label class="is-input-row medium-3 large-3 columns" for="check_03">
+					<input id="check_04" name="input_disabled" type="checkbox" disabled="disabled" />
+					<i class="fa fa-check-circle-o"></i>
+					<i class="fa fa-check-circle"></i>
+					默认不选择
+				</label>
+			</div>
+			
+			<!--	switch	-->
+			<h3 class="is-title text-center">switch</h3>			
+			<div class="input-group clearfix">
+				<div class="medium-3 large-3 columns">
+					<div class="is-input-row switch">
+					  <input class="switch-input" id="switch_1" name="switch_1" type="checkbox">
+					  <label class="switch-paddle round" for="switch_1">
+					    <span class="show-for-sr">switch</span>
+					    <span class="switch-active" aria-hidden="true">Yes</span>
+					    <span class="switch-inactive" aria-hidden="true">No</span>
+					  </label>
+					</div>
+					<p>switch 提示开关</p>
+				</div>
+				
+				<div class="medium-3 large-3 columns">
+					<div class="is-input-row switch">
+					  <input class="switch-input" id="switch_2" name="switch_2" type="checkbox">
+					  <label class="switch-paddle round" for="switch_2">
+					    <span class="show-for-sr">switch</span>
+					  </label>
+					</div>
+					<p>switch 开关</p>
+				</div>
+				
+				<div class="medium-3 large-3 columns">
+					<div class="is-input-row switch">
+					  <input class="switch-input" id="switch_3" name="switch_3" type="checkbox" checked="checked" disabled="disabled">
+					  <label class="switch-paddle round" for="switch_3">
+					    <span class="show-for-sr">switch</span>
+					  </label>
+					</div>
+					<p>switch 默认已选择</p>
+				</div>
+				
+				<div class="medium-3 large-3 columns">
+					<div class="is-input-row switch">
+					  <input class="switch-input" id="switch_4" name="switch_4" type="checkbox" disabled="disabled">
+					  <label class="switch-paddle round" for="switch_4">
+					    <span class="show-for-sr">switch</span>
+					  </label>
+					</div>
+					<p>switch 默认不选择</p>
+				</div>			
+			</div>
+			
+			<!--	Button	-->
+			<h3 class="is-title text-center">button</h3>			
+			<div class="input-group clearfix">
+				<div class="is-input-row medium-3 large-3 columns">
+					<button class="button surround">hover 环绕</button>
+				</div>
+				
+				<div class="is-input-row medium-3 large-3 columns">
+					<button class="button neon-lights">霓虹灯效果</button>
+				</div>
+				
+				<div class="is-input-row medium-3 large-3 columns">
+					<button class="button icon">
+						<span>图标</span>
+						<i class="fa fa-home"></i>
+					</button>
+				</div>
+				
+				<div class="is-input-row medium-3 large-3 columns">
+					<div class="rating">
+						<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+					</div>
+				</div>			
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!--	/外围框架	-->
+</body>
+</html>

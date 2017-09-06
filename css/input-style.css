@@ -1,0 +1,445 @@
+.input-box {
+	width: 100%;
+	height: auto;
+	margin: 5% auto;
+	padding: 0 3%;
+	color: #434343;
+	background: #F3F3F3;
+	-webkit-border-radius: 10px 10px 10px 10px;
+		-moz-border-radius: 10px 10px 10px 10px;
+			border-radius: 10px 10px 10px 10px;
+	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, .25);
+		box-shadow: 0 0 40px rgba(0, 0, 0, .25);
+}
+
+.is-title {
+	margin: 0 auto;
+	padding: 2% 0 1%;
+	text-transform: capitalize;
+	border-bottom: 1px solid #E6E6E6;
+}
+
+.input-group {
+	position: relative;
+	margin: .5% auto;
+	padding: 1.5% 0 3%;
+}
+
+.is-input-row {	
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	color: #CACACA;
+	cursor: pointer;
+}
+
+.is-input-row input {
+	outline: none;
+}
+
+.columns p {
+	text-align: center;
+	font-size: 18px;
+	color: #CACACA;
+}
+
+
+
+/*	隐藏默认单选按钮		*/
+.input-group label input[type="radio"] {
+	display: none;
+}
+
+/*	隐藏	未点击和点击后的图标
+ * 
+ * 	点击前隐藏 :checked 的图标
+ * 
+ * 	点击后隐藏 .fa-circle
+ * 
+ * 	*/
+.input-group label input[type="radio"] ~ i.fa.fa-circle,
+.input-group label input[type="radio"]:checked ~ i.fa.fa-circle-o {
+	display: none;
+}
+
+/*	添加	图标样式		*/
+.input-group label input[type="radio"] ~ i.fa.fa-circle-o,
+.input-group label input[type="radio"]:checked ~ i.fa.fa-circle {
+	position: relative;
+	display: inline;
+	font-size: 24px;
+	vertical-align: -3px;
+	color: #c8c8c8;
+	-webkit-transition: .3s all ease-in-out;
+		-moz-transition: .3s all ease-in-out;
+			-ms-transition: .3s all ease-in-out;
+				transition: .3s all ease-in-out;
+	-webkit-transition-duration: .5s;
+		-moz-transition-duration: .5s;
+			-ms-transition-duration: .5s;
+				transition-duration: .5s;
+}
+
+/*	点击后的图标字体颜色	*/
+.input-group label input[type="radio"]:checked ~ i.fa.fa-circle {
+	color: #22BB5B;
+}
+/*	hover效果	*/
+.input-group label:hover input[type="radio"] ~ i.fa {
+	color: #AED581;
+}
+
+.input-group label input[type="radio"] ~ i.fa.fa-circle-o:after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 8px;
+	width: 5px;
+	height: 5px;
+	background: #AED581;
+	opacity: 0;
+	-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+			border-radius: 100%;
+	-webkit-transition: .3s all ease-in-out;
+		-moz-transition: .3s all ease-in-out;
+			-ms-transition: .3s all ease-in-out;
+				transition: .3s all ease-in-out;
+	-webkit-transition-duration: .5s;
+		-moz-transition-duration: .5s;
+			-ms-transition-duration: .5s;
+				transition-duration: .5s;
+}
+
+.input-group label:hover input[type="radio"] ~ i.fa.fa-circle-o:after {
+	-webkit-animation: fade 1s infinite;
+		-moz-animation: fade 1s infinite;
+			-ms-animation: fade 1s infinite;
+				animation: fade 1s infinite;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+			-moz-transform: scale(.5);
+				-ms-transform: scale(.5);
+					transform: scale(.5);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+				-ms-transform: scale(1);
+					transform: scale(1);
+	}
+}
+
+@-moz-keyframes fade {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+			-moz-transform: scale(.5);
+				-ms-transform: scale(.5);
+					transform: scale(.5);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+				-ms-transform: scale(1);
+					transform: scale(1);
+	}
+}
+
+@-ms-keyframes fade {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+			-moz-transform: scale(.5);
+				-ms-transform: scale(.5);
+					transform: scale(.5);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+				-ms-transform: scale(1);
+					transform: scale(1);
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+		-webkit-transform: scale(.5);
+			-moz-transform: scale(.5);
+				-ms-transform: scale(.5);
+					transform: scale(.5);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+				-ms-transform: scale(1);
+					transform: scale(1);
+	}
+}
+
+
+
+
+/*	多选按钮		*/
+/*	隐藏默认按钮		*/
+.input-group label input[type="checkbox"] {
+	display: none;
+}
+
+/*	隐藏	未点击和点击后的图标
+ * 
+ * 	点击前隐藏 :checked 的图标
+ * 
+ * 	点击后隐藏 .fa-circle
+ * 
+ * 	*/
+.input-group label input[type="checkbox"] ~ i.fa.fa-check-circle,
+.input-group label input[type="checkbox"]:checked ~ i.fa.fa-check-circle-o {
+	display: none;
+}
+
+/*	添加	图标样式		*/
+.input-group label input[type="checkbox"] ~ i.fa.fa-check-circle-o,
+.input-group label input[type="checkbox"]:checked ~ i.fa.fa-check-circle {
+	position: relative;
+	display: inline;
+	font-size: 24px;
+	vertical-align: -3px;
+	color: #c8c8c8;
+	-webkit-transition: .3s all ease-in-out;
+		-moz-transition: .3s all ease-in-out;
+			-ms-transition: .3s all ease-in-out;
+				transition: .3s all ease-in-out;
+	-webkit-transition-duration: .5s;
+		-moz-transition-duration: .5s;
+			-ms-transition-duration: .5s;
+				transition-duration: .5s;
+}
+
+/*	点击后的图标字体颜色	*/
+.input-group label input[type="checkbox"]:checked ~ i.fa.fa-check-circle {
+	color: #22BB5B;
+}
+
+/*	hover效果	*/
+.input-group label:hover input[type="checkbox"] ~ i.fa {
+	color: #AED581;
+}
+
+
+
+/*	switch	*/
+
+.switch {	
+	position: relative;
+	-webkit-transition: .3s all ease-in-out;
+		-moz-transition: .3s all ease-in-out;
+			-ms-transition: .3s all ease-in-out;
+				transition: .3s all ease-in-out;
+	-webkit-transition-duration: .5s;
+		-moz-transition-duration: .5s;
+			-ms-transition-duration: .5s;
+				transition-duration: .5s;
+}
+
+.switch .switch-paddle:hover {	
+	background: #AED581;
+}
+
+/*	添加 label 圆角 	*/
+.round {
+	-webkit-border-radius: 32px;
+		-moz-border-radius: 32px;
+			border-radius: 32px;
+}
+
+/*	白色按钮 圆形显示		*/
+.switch-paddle::after {
+	-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+			border-radius: 100%;
+}
+
+input:checked ~.switch-paddle {
+	background: #22BB5B;
+}
+
+input:hover:checked ~.switch-paddle {
+	background: #22BB5B;
+}
+
+.switch-active,
+.switch-inactive {
+	color: #FFFFFF;
+}
+
+
+
+
+/*	Button	*/
+
+.button {
+	color: #CACACA;
+	background: #22BB5B;
+	border-width: 2px;
+	border-color: transparent;
+	-webkit-border-radius: 3px 3px 3px 3px;
+		-moz-border-radius: 3px 3px 3px 3px;
+			border-radius: 3px 3px 3px 3px;
+	outline: none;
+}
+
+.button:hover {	
+	background: #1fa952;
+}
+
+.button:focus {	
+	background: #1fa952;
+}
+
+.button.surround:hover {
+	color: #434343;
+	background: transparent;
+	-webkit-animation: surround 2s linear infinite alternate;
+		-moz-animation: surround 2s linear infinite alternate;
+			-ms-animation: surround 2s linear infinite alternate;
+				animation: suround 2s linear infinite alternate;
+}
+
+@-webkit-keyframes suround{
+	0%, 22% {
+		border-top-color: #F44336;
+	}
+	
+	26%, 48% {
+		border-right-color: #FFC107;
+	}
+	
+	52%, 74% {
+		border-bottom-color: #4CAF50;
+	}
+	
+	78%, 100% {
+		border-left-color: #2196F3;
+	}
+}
+
+@-moz-keyframes suround{
+	0%, 22% {
+		border-top-color: #F44336;
+	}
+	
+	26%, 48% {
+		border-right-color: #FFC107;
+	}
+	
+	52%, 74% {
+		border-bottom-color: #4CAF50;
+	}
+	
+	78%, 100% {
+		border-left-color: #2196F3;
+	}
+}
+
+@-ms-keyframes suround{
+	0%, 22% {
+		border-top-color: #F44336;
+	}
+	
+	26%, 48% {
+		border-right-color: #FFC107;
+	}
+	
+	52%, 74% {
+		border-bottom-color: #4CAF50;
+	}
+	
+	78%, 100% {
+		border-left-color: #2196F3;
+	}
+}
+
+@keyframes suround{
+	0%, 22% {
+		border-top-color: #F44336;
+	}
+	
+	26%, 48% {
+		border-right-color: #FFC107;
+	}
+	
+	52%, 74% {
+		border-bottom-color: #4CAF50;
+	}
+	
+	78%, 100% {
+		border-left-color: #2196F3;
+	}
+}
+
+.neon-lights:hover {
+	-webkit-box-shadow: 0 0 40px rgb(34, 187, 91);
+		box-shadow: 0 0 40px rgb(34, 187, 91);
+}
+
+.icon {
+	position: relative;
+}
+
+.icon span {
+	position: relative;
+	left: 0;
+	display: inline-block;
+	-webkit-transition-duration: 1s;
+		-moz-transition-duration: 1s;
+			-ms-transition-duration: 1s;
+				transition-duration: 1s;
+}
+
+.icon:hover span {
+	color: transparent;
+}
+
+.icon i.fa:before {
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	text-align: center;
+	font-size: 18px;
+	opacity: 0;
+}
+
+.icon:hover i.fa:before {
+	opacity: 1;
+}
+
+
+/*	五角星 	*/
+.rating {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+
+.rating>span {
+	display: inline-block;
+	position: relative;
+	width: 1.1em;
+	font-size: 30px;
+}
+
+.rating>span:hover:before,
+.rating>span:hover~span:before {
+	content: "\2605";
+	position: absolute;
+	color: #FFAE00;
+}
